@@ -1,0 +1,16 @@
+= docker-asciidoctor-deckjs
+
+== Description
+
+From official asciidoctor docker image (https://hub.docker.com/r/asciidoctor/docker-asciidoctor/) :
+
+* add deck.js backend
+
+== Usage
+
+[source]
+----
+docker run -v $VOLUME_DIR:/documents/ --name asciidoc-to-deckjs binout/docker-asciidoctor-deckjs asciidoctor -T /asciidoctor-backends/haml/deckjs -D /documents/output *.adoc
+----
+
+More information about `deckjs` backend : https://github.com/asciidoctor/asciidoctor-deck.js
